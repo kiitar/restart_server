@@ -39,7 +39,7 @@ const Dashboard = () => {
 
     let config = {
       method: "post",
-      url: "http://103.245.164.59:8082/restart",
+      url: "https://api.btf.co.th/apirestart",
       headers: {
         "Content-Type": "application/json",
       },
