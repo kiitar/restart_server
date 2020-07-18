@@ -34,22 +34,21 @@ const Dashboard = () => {
     console.log("click");
     console.log(state.i);
     console.log("restart");
-    const data = {
-      server_id: "b76c3542-7a2b-1deb-bbf7-a37259379754",
-      team: "fb",
-    };
-    const config = {
+
+    let data = JSON.stringify({ server_id: "b76c3542-7a2b-1deb-bbf7-a37259379754", team: "fb" });
+
+    let config = {
       method: "post",
-      url: "http://103.245.164.59:8081/restart",
+      url: "http://103.245.164.59:8082/restart",
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "application/json",
       },
       data: data,
     };
 
     axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);

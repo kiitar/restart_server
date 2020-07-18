@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { ModalContext, RestartContext } from "../../pages/Dashboard";
 
-function Modal(props) {
+const Modal = () => {
   const Modal = React.useContext(ModalContext);
   const Restart = React.useContext(RestartContext);
 
@@ -10,9 +10,11 @@ function Modal(props) {
     Modal.setModalVisible(false);
     Restart.CF();
   };
+
   const cancelBtn = () => {
     Modal.setModalVisible(false);
   };
+
   return (
     <div className="modal">
       <div className="container-modal">
@@ -33,6 +35,6 @@ function Modal(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Modal;
