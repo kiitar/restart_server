@@ -1,0 +1,55 @@
+.body {
+  background: #f1f1f1;
+  font-family: "Prompt", sans-serif;
+  text-align: center;
+}
+.container {
+  min-height: 570px;
+  padding: 40px;
+  margin: 30px;
+  box-shadow: 1px 2px 7px #aaaaaa;
+  background: white;
+  border-radius: 10px;
+}
+.logo-login {
+  width: 150px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 40px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.table {
+  width: 100%;
+  margin: 0 auto;
+}
+.user {
+  font-weight: bold;
+}
+button {
+  background: rgb(38, 156, 252);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+button:hover {
+  background: rgb(23, 138, 233);
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+button[disabled] {
+  cursor: not-allowed;
+  color: black;
+  background: white;
+}
