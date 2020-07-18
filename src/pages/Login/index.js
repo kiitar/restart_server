@@ -22,15 +22,14 @@ const Login = () => {
       setErr(true);
       return;
     }
-    if (user !== "tar") {
+    if (user !== "admin") {
       setErrMessage("* username is not correct.");
       setErr(true);
       return;
     }
 
-    if (user === "tar" && pass === "tar") {
+    if (user === "admin" && pass === "XvJz9Zc3") {
       localStorage.setItem("auth", true);
-      console.log("Login");
       Auth.setAuth(true);
     } else {
       setErrMessage("* wrong password.");

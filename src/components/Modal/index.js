@@ -20,7 +20,8 @@ const Modal = () => {
       <div className="container-modal">
         <div className="modal-column">
           <h2>Confirm Restart</h2>
-          <p>{`PC Name : ${Restart.state.v}`}</p>
+          <h4>{`PC Name : ${Restart.state.v.name}`}</h4>
+          <h4>{`IP Addr : ${Restart.state.v.ip}`}</h4>
           <br />
         </div>
         <div className="modal-row">

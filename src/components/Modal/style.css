@@ -16,6 +16,7 @@
 .container-modal {
   background: white;
   border-radius: 5px;
+  width: 40%;
   padding: 20px;
   transition: 1s;
 }
