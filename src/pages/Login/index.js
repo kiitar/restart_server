@@ -33,7 +33,7 @@ const Login = () => {
       console.log("Login");
       Auth.setAuth(true);
     } else {
-      setErrMessage("wrong password.");
+      setErrMessage("* wrong password.");
       setErr(true);
       return;
     }
