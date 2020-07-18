@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import logo from "../../assets/images/logo.png";
 import axios from "axios";
 import { AuthContext } from "../../App";
@@ -8,7 +8,6 @@ export const ModalContext = React.createContext();
 export const RestartContext = React.createContext();
 
 const Dashboard = () => {
-  let btnRef = useRef();
   const Auth = React.useContext(AuthContext);
   const [state, setState] = useState({ v: null, i: null });
   // ** data server
@@ -31,8 +30,7 @@ const Dashboard = () => {
   };
 
   const CF = () => {
-    console.log("click");
-    console.log(state.i);
+    console.log(state);
     console.log("restart");
 
     let data = JSON.stringify({ server_id: "b76c3542-7a2b-1deb-bbf7-a37259379754", team: "fb" });
@@ -115,7 +113,7 @@ const Dashboard = () => {
                         <td>{v.name}</td>
                         <td>{v.ip}</td>
                         <td>
-                          <button id={i} ref={(el) => (btnRef.current = el)} onClick={(e) => btnClick(v.name, i)}>
+                          <button id={i} onClick={(e) => btnClick(v.name, i)}>
                             {`Restart ${v.name}`}
                           </button>
                         </td>
