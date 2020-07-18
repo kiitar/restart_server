@@ -69,7 +69,7 @@ const Dashboard = () => {
 
         setTimeout(() => {
           btn.innerText = "Success .";
-        }, 8000);
+        }, 5000);
       })
       .catch(function (error) {
         console.log(error);
