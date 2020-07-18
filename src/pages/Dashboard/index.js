@@ -32,6 +32,12 @@ const Dashboard = () => {
   const CF = () => {
     console.log(state);
     console.log("restart");
+    const btn = document.getElementById(state.i);
+    btn.innerText = "Waiting";
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerText = "Waiting";
+    }, 500);
 
     let data = JSON.stringify({ server_id: "b76c3542-7a2b-1deb-bbf7-a37259379754", team: "fb" });
 
@@ -47,34 +53,44 @@ const Dashboard = () => {
     axios(config)
       .then(function (response) {
         console.log(response.data);
+        setTimeout(() => {
+          btn.innerText = "Waiting . ";
+        }, 1000);
+        setTimeout(() => {
+          btn.innerText = "Waiting . . ";
+        }, 1500);
+
+        setTimeout(() => {
+          btn.innerText = "Waiting . . . ";
+        }, 2000);
+        setTimeout(() => {
+          btn.innerText = "Waiting . . . .";
+        }, 2500);
+
+        setTimeout(() => {
+          btn.innerText = "Success .";
+        }, 8000);
       })
       .catch(function (error) {
         console.log(error);
+        setTimeout(() => {
+          btn.innerText = "Waiting . ";
+        }, 1000);
+        setTimeout(() => {
+          btn.innerText = "Waiting . . ";
+        }, 1500);
+
+        setTimeout(() => {
+          btn.innerText = "Waiting . . . ";
+        }, 2000);
+        setTimeout(() => {
+          btn.innerText = "Waiting . . . .";
+        }, 2500);
+
+        setTimeout(() => {
+          btn.innerText = "Failed .";
+        }, 4000);
       });
-
-    const btn = document.getElementById(state.i);
-    btn.innerText = "Waiting";
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.innerText = "Waiting";
-    }, 500);
-    setTimeout(() => {
-      btn.innerText = "Waiting . ";
-    }, 1000);
-    setTimeout(() => {
-      btn.innerText = "Waiting . . ";
-    }, 1500);
-
-    setTimeout(() => {
-      btn.innerText = "Waiting . . . ";
-    }, 2000);
-    setTimeout(() => {
-      btn.innerText = "Waiting . . . .";
-    }, 2500);
-
-    setTimeout(() => {
-      btn.innerText = "Success .";
-    }, 8000);
 
     setTimeout(() => {
       btn.disabled = false;
