@@ -124,7 +124,7 @@ const Dashboard = () => {
                   <tr>
                     <th>#</th>
                     <th>PC Name</th>
-                    <th>IP Number</th>
+                    <th>IP Addr</th>
                     <th>Restart</th>
                   </tr>
                 </thead>
